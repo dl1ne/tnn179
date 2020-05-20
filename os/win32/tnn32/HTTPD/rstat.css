@@ -1,0 +1,57 @@
+BODY {
+ COLOR: #FFFFFF;
+ FONT-FAMILY: Verdana, Arial;
+ FONT-SIZE: 12;
+}
+H1 {
+ FONT-SIZE: 15; COLOR: #FFCC00;
+}
+H2 {
+ FONT-SIZE: 10; COLOR: #FFFFFF;
+}
+a:link, a:visited {
+ COLOR: #FFFFFF;
+ text-weight: bold;
+ text-decoration: none;
+}
+a:hover {
+ COLOR: #FF6600;
+ text-weight: bold;
+ text-decoration: none;
+}
+.info {
+ FONT-SIZE: 10; COLOR: #99CCFF;
+}
+table.box {
+ background-color: #ffbb00;
+ backcolor: #220000;
+ backcolorlight: #00ff00;
+ backcolordark: #000000;
+ border-width: 0px;
+ width: 95%;
+ border-style: outset;
+ border-spacing: 2px;
+ border-padding: 8px;
+}
+.status {
+ FONT-SIZE: 10; BACKGROUND: #000000; COLOR: #FFCC00; TEXT-ALIGN: center;
+}
+.off {
+ FONT-SIZE: 10; BACKGROUND: #000000; COLOR: #ffffff;
+}.offline {
+ FONT-SIZE: 10; BACKGROUND: #9f00FF; COLOR: #ffffff;
+}.user {
+ FONT-SIZE: 10; BACKGROUND: #E06060; COLOR: #ffffff;
+}
+.thenet {
+ FONT-SIZE: 10; BACKGROUND: #E00060; COLOR: #ffffff;
+}
+.inp {
+ FONT-SIZE: 10; BACKGROUND: #0070C0; COLOR: #ffffff;
+}
+.Flexnet {
+ FONT-SIZE: 10; BACKGROUND: #006060; COLOR: #ffffff;
+}
+.about {
+ FONT-SIZE: 13; COLOR: #ffffff;
+}

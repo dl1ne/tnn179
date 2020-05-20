@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <title>TheNetNode</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <script src="/js/jquery.min.js"></script>
+  <script src="/js/bootstrap.min.js"></script>
+
+<script type="text/javascript">
+    $(document).ready(function(){
+      $("a#aktuell").click(function(){
+        $.ajax({
+          type: "GET",
+          url: "/cmd?cmd=a",
+          success: function(strResponse){
+            document.getElementById("content").style.display='block';
+            document.getElementById("content").innerHTML = unescape(strResponse);
+          }
+        });
+        return false;  // Verhindern, dass Link ausgeführt wird
+      });
+    });
+    $(document).ready(function(){
+      $("a#ports").click(function(){
+        $.ajax({
+          type: "GET",
+          url: "/cmd?cmd=p",
+          success: function(strResponse){
+            document.getElementById("content").style.display='block';
+            document.getElementById("content").innerHTML = unescape(strResponse);
+          }
+        });
+        return false;  // Verhindern, dass Link ausgeführt wird
+      });
+    });
+</script>
+
+</head>
+<body>
+<form type="post" name="frm" id="frm" class="frm">
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">TheNetNode</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="#">Home</a></li>
+      <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Status <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="#" id="aktuell">Aktuell</a></li>
+          <li><a href="#">Nodes</a></li>
+          <li><a href="#" id="ports">Ports</a></li>
+          <li><a href="#">Statistiken</a></li>
+        </ul>
+      </li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+      <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="container">
+      <form role="search" id="frm" autocomplete="off">
+        <div class="form-group">
+          <input type="text" class="form-control" id="cmd" placeholder="Execute..." autocomplete="off">
+        </div>
+      </form>
+</div>
+
+<div class="container" id="content">
+  <h3>Willkommen auf TheNetNode</h3>
+</div>
+
+</form>
+<script>
+$("#frm").submit(function(e) {
+
+    e.preventDefault(); // avoid to execute the actual submit of the form.
+
+    var form = $(this);
+    var url = form.attr('action');
+
+    $.ajax({
+           type: "GET",
+           url: "/cmd?cmd=" + document.getElementById("cmd").value,
+           data: form.serialize(), // serializes the form's elements.
+           success: function(data)
+           {
+		document.getElementById("content").innerHTML = data;
+		document.getElementById("cmd").value = "";
+           }
+         });
+
+
+});
+
+</script>
+</body>
+</html>
+
