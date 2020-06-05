@@ -366,6 +366,7 @@ extern char loginstr[];
 extern char infostr[];
 
 extern char author[];
+extern char autmod[];
 
 extern BOOLEAN    tnnb_aktiv;
 
