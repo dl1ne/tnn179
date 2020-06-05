@@ -120,7 +120,7 @@ char loginstr[] = "TNN V" __VER__ __SYSTEM__ "\r";
 
 char infostr[] = "TNN179";
 
-char author[] = "*** CB-Version by DAA531 - http://cb0gla.ddns.net:8080 ***\r"
-                "*** Afu-Version by DL1NE - http://github.com/dl1ne/    ***\r";
+char author[] = "*** CB-Version by DAA531 - http://cb0gla.ddns.net:8080 ***\r";
+char autmod[] = "*** Afu-Version by DL1NE - http://github.com/dl1ne/    ***\r";
 
 /* End of src/version.c */

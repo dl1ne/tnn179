@@ -413,8 +413,8 @@ static void mainf(void)
           "This version is compiled for %d Ports. "
           "Maximum %d L2-Links and %d Circuits.\r"
 #ifdef PPCONVERS
-          "conversd %5.5s-pp (c) dc6iq/dk5sg, TNN-Version by DL1XAO\r%s\r",
-          L2PNUM, LINKNMBR, NUMCIR, strchr(REV, ':')+2,author);
+          "conversd %5.5s-pp (c) dc6iq/dk5sg, TNN-Version by DL1XAO\r%s\r%s\r",
+          L2PNUM, LINKNMBR, NUMCIR, strchr(REV, ':')+2,author,autmod);
 #else
           "\r", L2PNUM, LINKNMBR, NUMCIR);
 #endif
