@@ -2463,8 +2463,10 @@ void ccpver(void)
                 " usage.\r         See www.nordlink.org for further"
                 " information.\r  This version compiled for %d Ports, %d"
                 " L2-Links and %d Circuits.\r"
-                                "       %s\r", L2PNUM, LINKNMBR, NUMCIR,author);
+                                "       %s", L2PNUM, LINKNMBR, NUMCIR,author);
 #endif
+
+putprintf(mbp, "       %s\r\r", autmod);
 
   if (clicnt != 0 && (*clipoi == '*' || *clipoi == '+')) {
     putstr("\rCompiled options:\r"

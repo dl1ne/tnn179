@@ -120,6 +120,7 @@ TNNUSEREXE		:= $(TNNDIR)userexe/
 TNNSYSEXE		:= $(TNNDIR)sysexe/
 TNNPACSAT		:= $(TNNDIR)pacsat/
 TNNMSG			:= $(TNNDIR)msg/
+TNNHTTPD		:= $(TNNDIR)httpd/
 #
 # Ein Verteil-Archiv wird auch nur bei Linux generiert
 # Der Pfad DISTDIR wird relativ zu / angegeben!
@@ -431,7 +432,7 @@ _install:
 		install -m 0700 -d $(TNNPACSAT)
 		install -m 0700 -d $(TNNMSG)
 
-baseinstall:	install $(TNNINI) $(TNNPAS)
+baseinstall:	install $(TNNINI) $(TNNPAS) $(TNNHTTPD)
 		install -m 0700 -d $(INSTCFG)
 		install -m 0600 $(TNNINI) $(INSTCFG)/tnn.ini
 		install -m 0600 $(INI)/tnnini.all $(TNNDIR)/tnnini.all
@@ -439,6 +440,10 @@ baseinstall:	install $(TNNINI) $(TNNPAS)
 		install -m 0600 $(TNNPAS) $(TNNDIR)/tnn179.pas
 		install -m 0600 $(INI)/tnn179.tnb $(TNNDIR)/tnn179.tnb
 		install -m 0600 $(DOC)/conversd.xhf $(TNNDIR)/conversd.xhf
+
+$(TNNHTTPD):	
+		cp -R httpd $(TNNHTTPD)
+
 
 $(TNNINI):	$(MAKEFILE)
 	echo $@
@@ -479,6 +484,12 @@ $(TNNINI):	$(MAKEFILE)
 	echo "device HTTPD" >>$(TNNINI)
 	echo "kisstype 23" >>$(TNNINI)
 	echo "port 12" >>$(TNNINI)
+	echo "device IPCONV" >>$(TNNINI)
+	echo "kisstype 24" >>$(TNNINI)
+	echo "port 13" >>$(TNNINI)
+	echo "device IRC" >>$(TNNINI)
+	echo "kisstype 25" >>$(TNNINI)
+	echo "port 14" >>$(TNNINI)
 	echo "device AX25IP" >>$(TNNINI)
 	echo "kisstype 8" >>$(TNNINI)
 	echo "port 15" >>$(TNNINI)

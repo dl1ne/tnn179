@@ -44,7 +44,7 @@
 "%sYou need an invitation to join the privat channel %d.\r"
 "%s%s@%s try to join your privat channel."
 "%scannot join channel %d, no more space.\r"
-"%sYou are now talking to channel %d"
+"%sYou are now talking to channel %d. "
 "You're alone.\r"
 "There are %d users.\r"
 "*** Charset in/out is %s/%s.\r"

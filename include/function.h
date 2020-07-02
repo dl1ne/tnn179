@@ -740,4 +740,6 @@ BOOLEAN is_port_suspended(USRBLK *u_block);
 char *ConnectTime(unsigned long);
 #endif /* CONNECTTIME */
 
+char *stringReplace(char *search, char *replace, char *string);
+
 /* End of include/function.h */

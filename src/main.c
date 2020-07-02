@@ -413,12 +413,12 @@ static void mainf(void)
           "This version is compiled for %d Ports. "
           "Maximum %d L2-Links and %d Circuits.\r"
 #ifdef PPCONVERS
-          "conversd %5.5s-pp (c) dc6iq/dk5sg, TNN-Version by DL1XAO\r%s",
+          "conversd %5.5s-pp (c) dc6iq/dk5sg, TNN-Version by DL1XAO\r%s\r",
           L2PNUM, LINKNMBR, NUMCIR, strchr(REV, ':')+2,author);
 #else
           "\r", L2PNUM, LINKNMBR, NUMCIR);
 #endif
-  hprintf("%s\r", autmod);
+  hprintf("%s\r\r", autmod);
 
 #ifdef AXIPR_UDP
   /* Sperre setzen. */

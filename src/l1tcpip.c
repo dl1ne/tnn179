@@ -826,7 +826,7 @@ static void PromptTCP(UWORD Interface)          /* Login-Prompt senden.       */
   }
 
   call2str(call,myid);                             /* Konvertiere das MYCALL. */
-  putprintf(STx->Data, "%s - %s\n", call, version); /* Standardtext einfuegen.*/
+  putprintf(STx->Data, "%s - %s\n", call, stringReplace("\r", "\n", version)); /* Standardtext einfuegen.*/
   LoginTextTCP(file, STx->Data);         /* evl. erweiterten CTEXT einfuegen. */
 
   putprintf(STx->Data, "\nLogin:");                    /* Und zum schluss den */
