@@ -29,7 +29,6 @@ void IrcWhoCommand(CONNECTION *cp);                         /* Who-Kommando. */
 void IrcWhoisCommand(CONNECTION *cp);                 /* Userdaten ausgeben. */
 void IrcTopicCommand(CONNECTION *cp);                 /* Topic setzen.       */
 
-
 typedef struct cmdtable_irc
 {
   char *name;
@@ -403,12 +402,12 @@ printf("DEBUG: l1irc.c - ProcessIrcInput()\n");
   cnvinbuf[2048] = 0;
 
   cmd = getarg(cnvinbuf, 0);                              /* Befehl einlesen. */
-
   if (cmd[0] == FALSE)                                        /* kein befehl, */
     return;                                                /* brechen wir ab. */
 
   cmdlen = strlen(cmd);                            /* Befehlslange ermitteln. */
                                                  /* durchsuche Befehls-Liste. */
+
 
 #ifdef MOD_L1IRC_C_LINEFEED
 if(cmd[cmdlen-1] == '\n')
@@ -2954,10 +2953,9 @@ printf("DEBUG: IRC Rufzeichen ungueltig! - %s -\n", scall);
 
     buffer[len++] = ch;                                      /* Zeichen eintragen. */
 #ifdef DEBUG_L1IRC_C
-printf("DEBUG: Buffer = %s\n", buffer);
+printf("DEBUG: l1irc.c - Buffer = %s\n", buffer);
 #endif
   }
-
 
   dealmb(tbp);                          /* Buffer entsorgen.                  */
   return(TRUE);

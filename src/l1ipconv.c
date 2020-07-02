@@ -451,6 +451,7 @@ printf("DEBUG: l1ipconv.c - AAA User\n");
       /* Markiere es das es ein Return gibt. */
       tcppoi->cr = TRUE;
 
+
     /* Zeichen ein LF-Return? */
     if (contens == LF) {
       /* LF moegen wir nicht.   */
@@ -493,6 +494,7 @@ printf("DEBUG: l1ipconv.c - Return fehlt\n");
 #ifdef DEBUG_L1IPCONF_C
 printf("DEBUG: l1ipconv.c - Nicht eingeloggt?\n");
 #endif
+
       /* Zeichen auf Gueltigkeit pruefen. */
       if (CheckContens(contens))
       {

@@ -388,6 +388,7 @@ printf("DEBUG: ostcpip.c - OsStackReadIndicationsSock() - KISS_IRC - Zeichen ver
           if (ok == YES)
           {
             tcppoi->cmd[tcppoi->cmdlen] = 0;
+
             /* Frame komplett. */
 #ifdef DEBUG_OSTCPIP_C
 printf("DEBUG: ostcpip.c - OsStackReadIndicationsSock() - KISS_IRC - Frame ist komplett, tcppoi->cmd: %s\n", tcppoi->cmd);
@@ -405,10 +406,8 @@ printf("DEBUG: ostcpip.c - OsStackReadIndicationsSock() - KISS_IRC - Frame ist k
       default :                                /* Ungueltiges Interface.      */
         break;                                 /* Hier werden wir nie kommen. */
     }
-
     return(FALSE);                             /* Frame noch nicht komplett.  */
   }
-
   return(FALSE);                               /* Frame noch nicht komplett.  */
 }
 
