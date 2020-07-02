@@ -8,18 +8,18 @@
 
 /* DL1NE, Debug of processing */
 
+/*
 #define DEBUG_L1IPCONF_C
 #define DEBUG_L1TCPIP_C
-/* #define DEBUG_L7UTILS_C */
 #define DEBUG_L1IRC_C
 #define DEBUG_OSTCPIP_C
 #define DEBUG_CVSCMDS_C
 #define DEBUG_CVSSERV_C
 #define DEBUG_L7CCP_C
-/* #define DEBUG_L7UTILS_C */
+#define DEBUG_L7UTILS_C
 #define DEBUG_CVSCVSD_C
 #define DEBUG_L1HTTPD_C
-
+*/
 
 /* DL1NE, Mods and fixes for Hams */
 #define MOD_L1IRC_C_ALLOWCHANZERO
