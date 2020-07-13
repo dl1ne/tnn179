@@ -732,7 +732,8 @@ char * stringReplace(char *search, char *replace, char *string) {
         }
 
         // Speicher reservieren
-        tempString = (char*) malloc(strlen(string) * sizeof(char));
+        // tempString = (char*) malloc(strlen(string) * sizeof(char));
+	tempString = malloc(strlen(string) + 1);
         if(tempString == NULL) {
                 return NULL;
         }
