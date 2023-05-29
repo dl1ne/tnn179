@@ -97,6 +97,7 @@ BOOLEAN unlock;
 char    tnn_socket[MAXPATH];
 char    start_name[MAXPATH];
 char    stop_name[MAXPATH];
+char    cShell[512];
 
 UWORD   maxrounds = 1;          /* 1 = 100 Runden (default, wenn kein   */
                                 /* "rounds"-Eintrag in tnn.ini          */

@@ -50,6 +50,8 @@
 
 #include "tnn.h"
 
+int iDescriptor;
+
 #ifdef SIXPACK
 
 #include "6pack.h"

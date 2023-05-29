@@ -1,5 +1,6 @@
 #include "tnn.h"
 #ifdef L1TCPIP
+struct        tcpstat_table_entry tcpstat_tbl[KISS_MAX][TCPSTAT_TABLE_SIZE];
 
 T_INTERFACE ifp[MAXINTERFACE];         /* Interface-Liste.                    */
 

@@ -4,8 +4,8 @@
 
 static T_INTERFACE *ifpp;              /* Zeiger auf das aktuelle Interface   */
 
-struct sockaddr_in myaddr_in;
-struct sockaddr_in peeraddr_in;
+extern struct sockaddr_in myaddr_in;
+extern struct sockaddr_in peeraddr_in;
 
 
 /* Schliesse aktuellen Socket. */
