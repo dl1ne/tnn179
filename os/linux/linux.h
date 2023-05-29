@@ -216,7 +216,7 @@ struct ftime
  extern char start_name[MAXPATH];
  extern char stop_name[MAXPATH];
 
- char cShell[512];      /* Pfad zu Shell */
+ extern char cShell[512];      /* Pfad zu Shell */
 
  extern UBYTE console_type; /* Typ der Konsole: keine, Terminal, Socket */
 

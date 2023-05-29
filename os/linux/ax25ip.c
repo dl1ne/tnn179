@@ -59,6 +59,8 @@
 #ifdef AX25IP
 #include "ax25ip.h"
 
+unsigned short my_udp;
+
 /*************************************************************************/
 /* AX25IP-Hausaufgaben : RX, TX und Routingtabellenpflege                */
 /*************************************************************************/

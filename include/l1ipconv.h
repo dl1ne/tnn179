@@ -22,7 +22,7 @@ struct iptbl                                    /* TBL fuer IP-Convers-Links. */
   BOOLEAN linkflag;
 };
 
-struct iptbl ip_tbl[MAX_ROUTEN];
+extern struct iptbl ip_tbl[MAX_ROUTEN];
 
 /* Anzahl der aktuellen IP-CONVERS-Routen auf 0 setzen. */
 extern int ip_tbl_top;

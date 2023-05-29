@@ -159,7 +159,7 @@ struct tcpstat_table_entry {
    unsigned short online;                            /* Route online/offline. */
 };
 
-struct        tcpstat_table_entry tcpstat_tbl[KISS_MAX][TCPSTAT_TABLE_SIZE];
+extern struct        tcpstat_table_entry tcpstat_tbl[KISS_MAX][TCPSTAT_TABLE_SIZE];
 
 extern void    TcpipSRV(void);                              /* TCPIP-Service. */
 extern void    InitTCP(void);                        /* TCPIP Initialisieren. */

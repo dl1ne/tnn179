@@ -1,4 +1,3 @@
-
 typedef struct attprt           /* Attach-Port-Struktur                 */
 {
   const char *attstr;           /* Device-Name                          */
@@ -12,15 +11,15 @@ typedef struct atttyp           /* Attach-KissType-Struktur             */
 } ATTTYP;
 
 
-unsigned short my_udp;
-BOOLEAN        tokenflag;
+extern unsigned short my_udp;
+extern BOOLEAN        tokenflag;
 
 #ifdef VANESSA
 extern BOOLEAN van_test(int);
 #endif
 
 #ifdef SIXPACK
-int iDescriptor;
+extern int iDescriptor;
 #endif /* SIXPACK */
 
 void           ccpattach(void);
